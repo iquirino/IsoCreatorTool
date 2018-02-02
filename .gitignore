@@ -5,3 +5,7 @@
 /.vs
 /src/bin/Debug
 /src/obj/Debug
+/install/IsoCreatorToolInstall/Release
+/packages
+/src/bin/Release
+/src/obj/Release
