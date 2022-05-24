@@ -119,7 +119,7 @@ namespace IsoCreatorTool.ViewModels
                     string[] directories = System.IO.Directory.GetDirectories(this.Folder, "*", System.IO.SearchOption.AllDirectories);
 
                     foreach (string dir in directories)
-                        builder.AddDirectory(dir.Substring(this.Folder.Length + 1));
+                        builder.AddDirectory(dir.Substring(this.Folder.Length));
 
                     string[] files = System.IO.Directory.GetFiles(this.Folder, "*", System.IO.SearchOption.AllDirectories);
 
@@ -136,7 +136,7 @@ namespace IsoCreatorTool.ViewModels
                         {
                             try
                             {
-                                builder.AddFile(file.Substring(this.Folder.Length + 1), System.IO.File.OpenRead(file));
+                                builder.AddFile(file.Substring(this.Folder.Length), System.IO.File.OpenRead(file));
                             }
                             catch (Exception exFile)
                             {
